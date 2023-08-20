@@ -10,20 +10,11 @@
 #include <string>
 #include <sstream>
 
-#if __cplusplus > 199711L
-#define JSONCC_COMPILER_HAS_CXX11 1
-#elif defined(_MSC_VER) && _MSC_VER > 1700
-#define JSONCC_COMPILER_HAS_CXX11 1
-#else
-#define JSONCC_COMPILER_HAS_CXX11 0
-#endif
-
 #define JSONCC_ASSERT(...) do { if( jsoncc::Assertions ) \
  jsoncc::assertion(__FILE__,__LINE__,#__VA_ARGS__,bool(__VA_ARGS__)); } while(0)
 
 namespace jsoncc {
 
-// FIXME(hjiang): Those should really be dynamic.
 // Settings
 enum Settings {
   // constants
