@@ -1,6 +1,5 @@
 jsoncc_test
 *.o
 *~
-jsoncc_test.dSYM/
 .vscode
 
